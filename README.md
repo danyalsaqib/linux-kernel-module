@@ -1,2 +1,2 @@
 # linux-kernel-module
-A simple Linux Kernel Module, created as part of an assignment
+A simple Linux Kernel Module, created as part of an assignment. It consists of one user space application, and one kernel module. The user space application creates a buffer, and initializes it with random values. It then passes the address and size of the buffer to the kernel module using the 'write' system call. The kernel module then copies the contents of the buffer from the user space to the kernel space, without using the copy_from_user() API. After the copying has completed, the buffers from both the user space and and kernel space are printed. Tested on Ubuntu 20.04 LTS.
